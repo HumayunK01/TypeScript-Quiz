@@ -3,10 +3,10 @@ const root = document.getElementById("root");
 
 // Type of Question
 type Question = {
-  question: string;
-  options: Array<string>;
-  answerIndex: number;
-  successMessage: string;
+  question: string,
+  options: Array<string>,
+  answerIndex: number,
+  successMessage: string,
 };
 
 // Collection of questions
@@ -61,20 +61,20 @@ const TOTAL_CORRECT_ANSWER_ID = "correct";
  * @returns {HTMLElement|HTMLInputElement}
  */
 const element = (props: {
-  elementType: string;
-  text?: string | undefined;
-  children?: Array<HTMLElement> | undefined;
-  id?: string | undefined;
-  className?: string | undefined;
-  name?: string | undefined;
-  inputType?: string | undefined;
-  inputValue?: string | undefined;
+  elementType: string,
+  text?: string | undefined,
+  children?: Array<HTMLElement> | undefined,
+  id?: string | undefined,
+  className?: string | undefined,
+  name?: string | undefined,
+  inputType?: string | undefined,
+  inputValue?: string | undefined,
   action?:
     | {
-        type: string;
-        method: EventListenerOrEventListenerObject;
+        type: string,
+        method: EventListenerOrEventListenerObject,
       }
-    | undefined;
+    | undefined,
 }): HTMLElement | HTMLInputElement => {
   let element = document.createElement(props.elementType);
 
